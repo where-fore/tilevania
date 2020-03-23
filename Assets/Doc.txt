@@ -1,0 +1,1 @@
+water - only kill player once it reaches their head - to prevent the water coming up from the tile under you and instantly killing you
