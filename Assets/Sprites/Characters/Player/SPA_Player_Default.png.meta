@@ -1,97 +1,91 @@
 fileFormatVersion: 2
-guid: 21ef1ffd087f32c428fc545c8b3d6f5b
+guid: 88eaca04af9074f4984a5ac21438c3bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -659715726531045707
-    second: Foreground Dirt_0
+      213: 6550705845014938674
+    second: SPA_Player_Default_0
   - first:
-      213: -7954748731322008760
-    second: Foreground Dirt_1
+      213: -3966991722532434478
+    second: SPA_Player_Default_1
   - first:
-      213: -6697992397789352579
-    second: Foreground Dirt_2
+      213: -666610444630319615
+    second: SPA_Player_Default_2
   - first:
-      213: -8174098362322899388
-    second: Foreground Dirt_3
+      213: 1912705780052337807
+    second: SPA_Player_Default_3
   - first:
-      213: 1846457802690847290
-    second: Foreground Dirt_4
+      213: 751539607085569592
+    second: SPA_Player_Default_4
   - first:
-      213: 4575062756106558496
-    second: Foreground Dirt_5
+      213: 6861797250112410188
+    second: SPA_Player_Default_5
   - first:
-      213: 8510683496275208269
-    second: Foreground Dirt_6
+      213: -374544262269069914
+    second: SPA_Player_Default_6
   - first:
-      213: -3799874488168647431
-    second: Foreground Dirt_7
+      213: -1863543071694787916
+    second: SPA_Player_Default_7
   - first:
-      213: -3295222553717793288
-    second: Foreground Dirt_8
+      213: 1416668341268830738
+    second: SPA_Player_Default_8
   - first:
-      213: -8314491784199885927
-    second: Foreground Dirt_9
+      213: 8600498265919669410
+    second: SPA_Player_Default_9
   - first:
-      213: 4373090040357725898
-    second: Foreground Dirt_10
+      213: 3889194326918633226
+    second: SPA_Player_Default_10
   - first:
-      213: 7397121052593871868
-    second: Foreground Dirt_11
+      213: -7394107038243734108
+    second: SPA_Player_Default_11
   - first:
-      213: 7124638676546774859
-    second: Foreground Dirt_12
+      213: -1225887521373554409
+    second: SPA_Player_Default_12
   - first:
-      213: 4370157143558407088
-    second: Foreground Dirt_13
+      213: -7164930610656539256
+    second: SPA_Player_Default_13
   - first:
-      213: -6444423121331125622
-    second: Foreground Dirt_14
+      213: -664044871093601389
+    second: SPA_Player_Default_14
   - first:
-      213: -4915905576768642691
-    second: Foreground Dirt_15
+      213: 8408725338947353208
+    second: SPA_Player_Default_15
   - first:
-      213: 4838015564537849595
-    second: Foreground Dirt_16
+      213: -2867125475278842755
+    second: SPA_Player_Default_16
   - first:
-      213: -52420647568850896
-    second: Foreground Dirt_17
+      213: -4000844522533880568
+    second: SPA_Player_Default_17
   - first:
-      213: -1473741259755223843
-    second: Foreground Dirt_18
+      213: -7503626590888971920
+    second: SPA_Player_Default_18
   - first:
-      213: -867298495863188824
-    second: Foreground Dirt_19
+      213: -4511845988843747138
+    second: SPA_Player_Default_19
   - first:
-      213: 779318011920992082
-    second: Foreground Dirt_20
+      213: 564079421840968669
+    second: SPA_Player_Default_20
   - first:
-      213: 8065460326397732624
-    second: Foreground Dirt_21
+      213: -3197037624644482626
+    second: SPA_Player_Default_21
   - first:
-      213: -6498287280991143817
-    second: Foreground Dirt_22
+      213: 3164313119080923898
+    second: SPA_Player_Default_22
   - first:
-      213: 2046952752248119288
-    second: Foreground Dirt_23
+      213: 1333197292120811375
+    second: SPA_Player_Default_23
   - first:
-      213: -5772192377351234823
-    second: Foreground Dirt_24
+      213: 7843928408310766438
+    second: SPA_Player_Default_24
   - first:
-      213: 6152971723399229387
-    second: Foreground Dirt_25
+      213: -2198717745363442965
+    second: SPA_Player_Default_25
   - first:
-      213: -5022386458920968233
-    second: Foreground Dirt_26
+      213: 384543783387125018
+    second: SPA_Player_Default_26
   - first:
-      213: -7740586209695626608
-    second: Foreground Dirt_27
-  - first:
-      213: -3714680274350475605
-    second: Foreground Dirt_28
-  - first:
-      213: 3740255684472826977
-    second: Foreground Dirt_29
+      213: -790101713430193420
+    second: SPA_Player_Default_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -189,631 +183,589 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Foreground Dirt_0
+      name: SPA_Player_Default_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 190
+        y: 196
         width: 32
         height: 32
-      alignment: 0
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b6d063ca0838d6f0800000000000000
-      internalID: -659715726531045707
+      spriteID: 234c0384248c8ea50800000000000000
+      internalID: 6550705845014938674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_1
+      name: SPA_Player_Default_1
       rect:
         serializedVersion: 2
         x: 38
-        y: 190
+        y: 196
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84bff08cc2e0b9190800000000000000
-      internalID: -7954748731322008760
+      spriteID: 2dd0a8fdb0a62f8c0800000000000000
+      internalID: -3966991722532434478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_2
+      name: SPA_Player_Default_2
       rect:
         serializedVersion: 2
         x: 76
-        y: 190
+        y: 196
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7daf75d663fb03a0800000000000000
-      internalID: -6697992397789352579
+      spriteID: 10e9e3c1559bfb6f0800000000000000
+      internalID: -666610444630319615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_3
+      name: SPA_Player_Default_3
       rect:
         serializedVersion: 2
         x: 114
-        y: 190
+        y: 196
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e24a209d4cf8e80800000000000000
-      internalID: -8174098362322899388
+      spriteID: f842bd3e5cb4b8a10800000000000000
+      internalID: 1912705780052337807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_4
+      name: SPA_Player_Default_4
       rect:
         serializedVersion: 2
         x: 152
-        y: 190
+        y: 196
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a32e22ea69fef9910800000000000000
-      internalID: 1846457802690847290
+      spriteID: 836d8f27a410e6a00800000000000000
+      internalID: 751539607085569592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_5
+      name: SPA_Player_Default_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 152
+        y: 158
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02cd9d24653ed7f30800000000000000
-      internalID: 4575062756106558496
+      spriteID: c42d3bd5e300a3f50800000000000000
+      internalID: 6861797250112410188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_6
+      name: SPA_Player_Default_6
       rect:
         serializedVersion: 2
         x: 38
-        y: 152
+        y: 158
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d48634f5c850c1670800000000000000
-      internalID: 8510683496275208269
+      spriteID: 6a59ac65af95dcaf0800000000000000
+      internalID: -374544262269069914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_7
+      name: SPA_Player_Default_7
       rect:
         serializedVersion: 2
         x: 76
-        y: 152
+        y: 158
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f473ad1942244bc0800000000000000
-      internalID: -3799874488168647431
+      spriteID: 4baedf3237d5326e0800000000000000
+      internalID: -1863543071694787916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_8
+      name: SPA_Player_Default_8
       rect:
         serializedVersion: 2
         x: 114
-        y: 152
+        y: 158
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd9bc5db840542d0800000000000000
-      internalID: -3295222553717793288
+      spriteID: 21adeddb95409a310800000000000000
+      internalID: 1416668341268830738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_9
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 152
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99bacda36cdfc9c80800000000000000
-      internalID: -8314491784199885927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_10
+      name: SPA_Player_Default_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 114
+        y: 120
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6225ad83650bc30800000000000000
-      internalID: 4373090040357725898
+      spriteID: 2a4418ffa9b1b5770800000000000000
+      internalID: 8600498265919669410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_11
+      name: SPA_Player_Default_10
       rect:
         serializedVersion: 2
         x: 38
-        y: 114
+        y: 120
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfbdb6cd76ad7a660800000000000000
-      internalID: 7397121052593871868
+      spriteID: a07137e62a139f530800000000000000
+      internalID: 3889194326918633226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_12
+      name: SPA_Player_Default_11
       rect:
         serializedVersion: 2
         x: 76
-        y: 114
+        y: 120
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b47649cd02dcfd260800000000000000
-      internalID: 7124638676546774859
+      spriteID: 4ad344a03dad26990800000000000000
+      internalID: -7394107038243734108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_13
+      name: SPA_Player_Default_12
       rect:
         serializedVersion: 2
         x: 114
-        y: 114
+        y: 120
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b34f6a94cae5ac30800000000000000
-      internalID: 4370157143558407088
+      spriteID: 719f1f95bc5ccfee0800000000000000
+      internalID: -1225887521373554409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_14
+      name: SPA_Player_Default_13
       rect:
         serializedVersion: 2
         x: 152
-        y: 114
+        y: 120
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a828ebea05fc096a0800000000000000
-      internalID: -6444423121331125622
+      spriteID: 88d8e7f229d019c90800000000000000
+      internalID: -7164930610656539256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_15
+      name: SPA_Player_Default_14
       rect:
         serializedVersion: 2
         x: 0
-        y: 76
+        y: 82
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d71e75b6ce137cbb0800000000000000
-      internalID: -4915905576768642691
+      spriteID: 39bbb8f35b6d8c6f0800000000000000
+      internalID: -664044871093601389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_16
+      name: SPA_Player_Default_15
       rect:
         serializedVersion: 2
         x: 38
-        y: 76
+        y: 82
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf6e616e585142340800000000000000
-      internalID: 4838015564537849595
+      spriteID: 87a78c9f42bc1b470800000000000000
+      internalID: 8408725338947353208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_17
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 76
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03043c2e2b3c54ff0800000000000000
-      internalID: -52420647568850896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_18
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 76
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd40479e1283c8be0800000000000000
-      internalID: -1473741259755223843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_19
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 76
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a218d7fc9cb6f3f0800000000000000
-      internalID: -867298495863188824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_20
+      name: SPA_Player_Default_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 38
+        y: 44
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2574d935a91b0da00800000000000000
-      internalID: 779318011920992082
+      spriteID: d741887229ce538d0800000000000000
+      internalID: -2867125475278842755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_21
+      name: SPA_Player_Default_17
       rect:
         serializedVersion: 2
         x: 38
-        y: 38
+        y: 44
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01761f82f654eef60800000000000000
-      internalID: 8065460326397732624
+      spriteID: 80dfcc8aa152a78c0800000000000000
+      internalID: -4000844522533880568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_22
+      name: SPA_Player_Default_18
       rect:
         serializedVersion: 2
         x: 76
-        y: 38
+        y: 44
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7787518b52271d5a0800000000000000
-      internalID: -6498287280991143817
+      spriteID: 07133ea1f53cdd790800000000000000
+      internalID: -7503626590888971920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_23
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 38
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ffd1c5deac386c10800000000000000
-      internalID: 2046952752248119288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_24
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 38
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fa13cc7d9d05efa0800000000000000
-      internalID: -5772192377351234823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Foreground Dirt_25
+      name: SPA_Player_Default_19
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 6
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcfeb3ebe2fb36550800000000000000
-      internalID: 6152971723399229387
+      spriteID: eb882b95af3b261c0800000000000000
+      internalID: -4511845988843747138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_26
+      name: SPA_Player_Default_20
       rect:
         serializedVersion: 2
         x: 38
-        y: 0
+        y: 6
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7df98471026ec4ab0800000000000000
-      internalID: -5022386458920968233
+      spriteID: ddb40fbde3304d700800000000000000
+      internalID: 564079421840968669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_27
+      name: SPA_Player_Default_21
       rect:
         serializedVersion: 2
         x: 76
-        y: 0
+        y: 6
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09a0ec98ad9e39490800000000000000
-      internalID: -7740586209695626608
+      spriteID: eb9c1811837d1a3d0800000000000000
+      internalID: -3197037624644482626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_28
+      name: SPA_Player_Default_22
       rect:
         serializedVersion: 2
         x: 114
-        y: 0
+        y: 6
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba67031c8fdc27cc0800000000000000
-      internalID: -3714680274350475605
+      spriteID: af24dec3406e9eb20800000000000000
+      internalID: 3164313119080923898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foreground Dirt_29
+      name: SPA_Player_Default_23
       rect:
         serializedVersion: 2
         x: 152
-        y: 0
+        y: 6
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16c63227abe08e330800000000000000
-      internalID: 3740255684472826977
+      spriteID: f67af54afd7708210800000000000000
+      internalID: 1333197292120811375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPA_Player_Default_24
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b55f4145b3bdc60800000000000000
+      internalID: 7843928408310766438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPA_Player_Default_25
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2a3422cd59c71e0800000000000000
+      internalID: -2198717745363442965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPA_Player_Default_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15df59988c265500800000000000000
+      internalID: 384543783387125018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPA_Player_Default_27
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 6
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fad0928daef805f0800000000000000
+      internalID: -790101713430193420
       vertices: []
       indices: 
       edges: []
