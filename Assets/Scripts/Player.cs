@@ -24,16 +24,7 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        if (Input.GetAxis("Horizontal") > 1)
-        {
-            Vector2 moveSpeed = new Vector2(runSpeed, 0);
-            myRigidBody.velocity = moveSpeed;
-        }
-
-        if (Input.GetAxis("Horizontal") < 1)
-        {
-            Vector2 moveSpeed = new Vector2(runSpeed, 0);
-            myRigidBody.velocity = moveSpeed;
-        }
+        Vector2 moveSpeed = new Vector2(runSpeed * Input.GetAxis("Horizontal"), myRigidBody.velocity.y);
+        myRigidBody.velocity = moveSpeed;
     }
 }
