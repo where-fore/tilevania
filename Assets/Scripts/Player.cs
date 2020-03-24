@@ -7,14 +7,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float runSpeed = 5.0f;
 
-    private RigidBody myRigidBody = null;
-
+    private Rigidbody2D myRigidBody = null;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidBody = GetComponent<RigidBody2d>();
+        myRigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -27,12 +26,14 @@ public class Player : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") > 1)
         {
-            myRigidBody.velocity = runSpeed;
+            Vector2 moveSpeed = new Vector2(runSpeed, 0);
+            myRigidBody.velocity = moveSpeed;
         }
 
         if (Input.GetAxis("Horizontal") < 1)
         {
-            myRigidBody.velocity = runSpeed;
+            Vector2 moveSpeed = new Vector2(runSpeed, 0);
+            myRigidBody.velocity = moveSpeed;
         }
     }
 }
