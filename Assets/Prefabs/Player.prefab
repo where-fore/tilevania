@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  jumpSpeed: 8.5
+  jumpSpeed: 14
 --- !u!114 &1954704772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,4 +196,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 3.5
-  lowJumpMultiplier: 3
+  lowJumpMultiplier: 8
+  gravityMultiplier: 4
