@@ -11,6 +11,9 @@ public class BetterJump : MonoBehaviour
     [SerializeField]
     private float lowJumpMultiplier = 3f;
 
+    [SerializeField]
+    private float gravityMultiplier = 4f;
+
     private string jumpButtonInputName = "Jump";
 
     // Cached Component Refences
@@ -20,8 +23,7 @@ public class BetterJump : MonoBehaviour
     {
         CacheComponentReferences();
 
-        fallMultiplier -= 1; // Unity already accounts of 1 multiple of gravity, so we need to multiply by 1 less than we expect when setting "fallMultiplier"
-        lowJumpMultiplier -= 1; // Unity already accounts of 1 multiple of gravity, so we need to multiply by 1 less than we expect when setting "lowJumpMultiplier"
+        myRigidbody2D.gravityScale = gravityMultiplier;
     }
 
     private void Update()
