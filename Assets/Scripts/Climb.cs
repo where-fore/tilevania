@@ -7,19 +7,17 @@ public class Climb : MonoBehaviour
 {
     // Config
     [SerializeField] private float climbSpeed = 12f;
-    private string layerForClimbableObject = "Climbing";
+    [SerializeField] private LayerMask climbableLayer;
 
     private string isClimbingAnimatorBoolString = "IsClimbing";
 
     private bool isClimbing = false;
 
-    private bool isInLadder = false;
-
     private string climbingInputAxis = "Vertical";
 
     private string jumpInput = "Jump";
 
-    private Vector2 cachedStartingGravity;
+    private float cachedStartingGravity;
 
 
     // Cached Component References
@@ -32,59 +30,54 @@ public class Climb : MonoBehaviour
     void Start()
     {
         CacheComponentReferences();
-        cachedStartingGravity = Physics2D.gravity;
     }
 
     private void Update()
     {
-        bool isTouchingLadder = myCollider2D.IsTouchingLayers(LayerMask.GetMask(layerForClimbableObject));
-        Debug.Log(isTouchingLadder);
+        bool isTouchingLadder = myCollider2D.IsTouchingLayers(climbableLayer);
 
-        if (isTouchingLadder && !isInLadder)
-        {
-            isInLadder = true;
-        }
-
-        if(!isTouchingLadder)
-        {
-            isInLadder = false;
-        }
-
-        if (isInLadder)
+        if (isTouchingLadder)
         {
             ListenForClimbInputs();
         }
+    }
 
-        if (isClimbing)
+    private void OnTriggerExit2D(Collider2D triggerToExit)
+    {
+        if (1 << triggerToExit.gameObject.layer == climbableLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
         {
-            //myRigidbody2D.velocity += cachedStartingGravity;
+            StopClimbing();
         }
     }
 
     private void ListenForClimbInputs()
     {
 
-        if (!isClimbing && Input.GetButtonDown(climbingInputAxis))
-        {
-            Debug.Log("Trying to begin climbing");
-            BeginClimbing();
-        }
-        else if (Input.GetAxis(climbingInputAxis) != 0 && isClimbing)
-        {
-            MoveClimbwards(Input.GetAxis(climbingInputAxis));
-        }
-
         if(isClimbing && Input.GetButtonDown(jumpInput))
         {
             StopClimbing();
+        }
+
+        if (!isClimbing && Input.GetButton(climbingInputAxis))
+        {
+            BeginClimbing();
+        }
+        
+        if (isClimbing)
+        {
+            MoveClimbwards(Input.GetAxis(climbingInputAxis));
         }
     }
 
     private void BeginClimbing()
     {
-        Debug.Log("Climbing");
         isClimbing = true;
         myRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+
+        cachedStartingGravity = myRigidbody2D.gravityScale;
+        myRigidbody2D.gravityScale = 0;
+        myRigidbody2D.velocity = Vector2.zero;
+
 
         PlayClimbAnimation();
     }
@@ -93,6 +86,7 @@ public class Climb : MonoBehaviour
     {
         isClimbing = false;
         myRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+        myRigidbody2D.gravityScale = cachedStartingGravity;
 
         StopClimbingAnimation();
     }
