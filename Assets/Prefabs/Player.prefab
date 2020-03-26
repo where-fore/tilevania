@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 1954704772}
   - component: {fileID: 3360135541910443389}
   - component: {fileID: 1954704774}
+  - component: {fileID: 1604243369}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1768120907
-  m_SortingLayer: 2
+  m_SortingLayerID: 765696517
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1857188551261513057, guid: 5a75caceb569eaa49af2893a0c6ee500,
     type: 3}
@@ -158,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  jumpSpeed: 14
 --- !u!114 &1954704772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +195,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2994df4af74130e41b0feeda9e129dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 3.5
+  jumpSpeed: 16
+  fallMultiplier: 4.5
   lowJumpMultiplier: 8
   gravityMultiplier: 4
+  layerToTouchForRefreshedJumpString: Ground
+--- !u!114 &1604243369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055503519846754636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6d149e626e7524e89daa5e981c3111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climbSpeed: 5
