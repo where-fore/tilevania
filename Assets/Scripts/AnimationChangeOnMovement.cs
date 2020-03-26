@@ -8,7 +8,7 @@ public class AnimationChangeOnMovement : MonoBehaviour
     // Config
     private float movementBuffer = 1f; // The amount of velocity needed to count as moving - do not make this 0 for float rounding reasons.
 
-    private string isRunningAnimatiorBoolString = "IsRunning";
+    private string isRunningAnimatorBoolString = "IsRunning";
 
     // Cached Component References
     private Rigidbody2D myRigidbody2D = null;
@@ -40,11 +40,11 @@ public class AnimationChangeOnMovement : MonoBehaviour
 
         if (moving == true)
         {
-            myAnimator.SetBool(isRunningAnimatiorBoolString, true);
+            myAnimator.SetBool(isRunningAnimatorBoolString, true);
         }
         else if (moving == false)
         {
-            myAnimator.SetBool(isRunningAnimatiorBoolString, false);
+            myAnimator.SetBool(isRunningAnimatorBoolString, false);
         }
     }
 
