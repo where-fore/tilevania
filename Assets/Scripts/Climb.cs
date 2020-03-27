@@ -42,9 +42,9 @@ public class Climb : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D triggerToExit)
+    private void OnTriggerExit2D(Collider2D triggerExiting)
     {
-        if (1 << triggerToExit.gameObject.layer == climbableLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
+        if (1 << triggerExiting.gameObject.layer == climbableLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
         {
             if (isClimbing)
             {

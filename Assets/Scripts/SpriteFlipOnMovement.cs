@@ -39,11 +39,11 @@ public class SpriteFlipOnMovement : MonoBehaviour
 
         if (movingToTheLeft)
         {
-            mySpriteRenderer.flipX = true;
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         else if (movingToTheRight)
         {
-            mySpriteRenderer.flipX = false;
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
     }
 

@@ -40,7 +40,7 @@ public class BetterJump : MonoBehaviour
 
     private void ListenForJumpInputs()
     {
-        bool jumpButtonPressed = Input.GetButtonDown("Jump");
+        bool jumpButtonPressed = Input.GetButtonDown(jumpButtonInputName);
 
         Jump(jumpButtonPressed);
     }

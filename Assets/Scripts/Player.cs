@@ -5,12 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Config
-    [SerializeField]
-    private float runSpeed = 5.0f;
+    [SerializeField] private float runSpeed = 5.0f;
+    
+    private string horizontalMovementInputString = "Horizontal";
 
     // Cached Component References
-    private Rigidbody2D myRigidbody2D = null;
-    private Animator myAnimator = null;
+    private Rigidbody2D myRigidbody2D;
+    private Animator myAnimator;
 
 
     // Messages then methods
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
 
     private void ListenForMovementInputs()
     {
-        Run(Input.GetAxis("Horizontal"));
+        Run(Input.GetAxis(horizontalMovementInputString));
     }
 
     private void Run(float runButtonPressedAmount)
