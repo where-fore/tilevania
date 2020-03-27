@@ -46,7 +46,10 @@ public class Climb : MonoBehaviour
     {
         if (1 << triggerToExit.gameObject.layer == climbableLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
         {
-            StopClimbing();
+            if (isClimbing)
+            {
+                StopClimbing();
+            }
         }
     }
 
