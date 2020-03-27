@@ -5,28 +5,24 @@ using UnityEngine;
 public class BetterJump : MonoBehaviour
 {
     // Config
-    [SerializeField]
-    private float jumpSpeed = 9.0f;
+    [SerializeField] private float jumpSpeed = 9.0f;
 
     [SerializeField]
     private float fallMultiplier = 3.5f;
 
-    [SerializeField]
-    private float lowJumpMultiplier = 3f;
+    [SerializeField] private float lowJumpMultiplier = 3f;
 
-    [SerializeField]
-    private float gravityMultiplier = 4f;
+    [SerializeField] private float gravityMultiplier = 4f;
 
-    [SerializeField]
-    private string layerToTouchForRefreshedJumpString = "Ground";
-    private int layerToTouchForRefreshJump = 0;
-
+    [SerializeField] private string layerToTouchForRefreshedJumpString = "Ground";
+    private int layerToTouchForRefreshJump;
     private string jumpButtonInputName = "Jump";
 
-    // Cached Component Refences
-    private Rigidbody2D myRigidbody2D = null;
 
-    private CapsuleCollider2D myCapsuleCollider2D = null;
+    // Cached Component Refences
+    private Rigidbody2D myRigidbody2D;
+    private CapsuleCollider2D myBodyCollider2D;
+    private BoxCollider2D myFeetCollider2D;
 
     private void Start()
     {
@@ -53,7 +49,7 @@ public class BetterJump : MonoBehaviour
     {
         ApplyExtraJumpGravity();
 
-        bool ableToJump = myCapsuleCollider2D.IsTouchingLayers(layerToTouchForRefreshJump);
+        bool ableToJump = myFeetCollider2D.IsTouchingLayers(layerToTouchForRefreshJump);
 
         if (jumpButtonPressed && ableToJump)
         { 
@@ -81,6 +77,7 @@ public class BetterJump : MonoBehaviour
     private void CacheComponentReferences()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
-        myCapsuleCollider2D = GetComponent<CapsuleCollider2D>();
+        myBodyCollider2D = GetComponent<CapsuleCollider2D>();
+        myFeetCollider2D = GetComponent<BoxCollider2D>();
     }
 }
