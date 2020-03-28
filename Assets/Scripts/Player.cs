@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,11 @@ public class Player : MonoBehaviour
 {
     // Config
     [SerializeField] private float runSpeed = 5.0f;
+    [SerializeField] private LayerMask[] layersThatKillMe;
     
     private string horizontalMovementInputString = "Horizontal";
+
+    private bool alive = true;
 
     // Cached Component References
     private Rigidbody2D myRigidbody2D;
@@ -22,7 +26,37 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        ListenForMovementInputs();
+        if (alive)
+        {
+            ListenForMovementInputs();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collisionData)
+    {
+        CheckForDeath(collisionData.collider);
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherCollider2D)
+    {
+        CheckForDeath(otherCollider2D);
+    }
+
+    private void CheckForDeath(Collider2D otherCollider2D)
+    {
+        foreach (LayerMask deathlyLayer in layersThatKillMe)
+        {
+            if (1 << otherCollider2D.gameObject.layer == deathlyLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
+            {
+                Die();
+            }
+        }
+
+    }
+
+    private void Die()
+    {
+        alive = false;
     }
 
     private void ListenForMovementInputs()
