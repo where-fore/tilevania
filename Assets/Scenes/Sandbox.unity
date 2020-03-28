@@ -30113,6 +30113,19 @@ PrefabInstance:
       propertyPath: layersThatKillMe.Array.data[1].m_Bits
       value: 8192
       objectReference: {fileID: 0}
+    - target: {fileID: 1954704766, guid: 62fc4fea9a23e9f44a9f2b83e0713443, type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: -4379642296028604701, guid: 5a75caceb569eaa49af2893a0c6ee500,
+        type: 3}
+    - target: {fileID: 1954704766, guid: 62fc4fea9a23e9f44a9f2b83e0713443, type: 3}
+      propertyPath: deathAnimationForce.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954704766, guid: 62fc4fea9a23e9f44a9f2b83e0713443, type: 3}
+      propertyPath: deathAnimationForce.y
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 5055503519846754636, guid: 62fc4fea9a23e9f44a9f2b83e0713443,
         type: 3}
       propertyPath: m_Name

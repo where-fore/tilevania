@@ -8,14 +8,18 @@ public class Player : MonoBehaviour
     // Config
     [SerializeField] private float runSpeed = 5.0f;
     [SerializeField] private LayerMask[] layersThatKillMe;
+    [SerializeField] private Sprite deadSprite;
+    [SerializeField] private Vector2 deathAnimationForce;
     
     private string horizontalMovementInputString = "Horizontal";
+    private string isAliveAnimationString = "IsAlive";
 
     private bool alive = true;
 
     // Cached Component References
     private Rigidbody2D myRigidbody2D;
     private Animator myAnimator;
+    private SpriteRenderer mySpriteRenderer;
 
 
     // Messages then methods
@@ -48,7 +52,7 @@ public class Player : MonoBehaviour
         {
             if (1 << otherCollider2D.gameObject.layer == deathlyLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
             {
-                Die();
+                if (alive) { Die(); }
             }
         }
 
@@ -57,6 +61,8 @@ public class Player : MonoBehaviour
     private void Die()
     {
         alive = false;
+        myRigidbody2D.velocity = deathAnimationForce;
+        myAnimator.SetBool(isAliveAnimationString, false);
     }
 
     private void ListenForMovementInputs()
@@ -74,5 +80,6 @@ public class Player : MonoBehaviour
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 }
