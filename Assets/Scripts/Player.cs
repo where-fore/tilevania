@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
         alive = false;
         myRigidbody2D.velocity = deathAnimationForce;
         myAnimator.SetBool(isAliveAnimationString, false);
+        Time.timeScale = 0.3f;
     }
 
     private void ListenForMovementInputs()
