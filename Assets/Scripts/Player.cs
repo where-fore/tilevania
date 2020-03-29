@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
     public void FinishExitingLevel()
     {
         Debug.Log("Player Exit Animation Finished");
+        Time.timeScale = 1f;
     }
     public void StartExitingLevel()
     {
