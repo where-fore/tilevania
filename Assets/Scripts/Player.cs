@@ -54,6 +54,8 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player Exit Animation Finished");
         Time.timeScale = 1f;
+
+        GameObject.FindObjectOfType<SceneTransitioner>().LoadNextLevel();
     }
     public void StartExitingLevel()
     {
