@@ -82,6 +82,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         alive = false;
+        GetComponent<AudioSource>().Play();
         myRigidbody2D.velocity = deathAnimationForce;
         myAnimator.SetBool(isAliveAnimationString, false);
         Time.timeScale = 0.3f;

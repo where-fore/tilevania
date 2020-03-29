@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Levels/Level 2.unity
     guid: c1199c9497bd760429cf6ff97c32f178
   - enabled: 1
+    path: Assets/Levels/Sandbox.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Levels/Congratulations Level.unity
     guid: 6d7e5677aefed784bad1034dab957751
   m_configObjects: {}
