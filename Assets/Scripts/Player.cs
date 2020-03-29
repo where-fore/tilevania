@@ -13,8 +13,11 @@ public class Player : MonoBehaviour
     
     private string horizontalMovementInputString = "Horizontal";
     private string isAliveAnimationString = "IsAlive";
+    private string exitingLevelAnimationString = "ExitingLevel";
 
     private bool alive = true;
+
+    private bool invulnerable = false;
 
     // Cached Component References
     private Rigidbody2D myRigidbody2D;
@@ -46,13 +49,28 @@ public class Player : MonoBehaviour
         CheckForDeath(otherCollider2D);
     }
 
+ // Used in Animation Events
+    public void FinishExitingLevel()
+    {
+        Debug.Log("Player Exit Animation Finished");
+    }
+    public void StartExitingLevel()
+    {
+        Debug.Log("Player Exit Animation Started");
+        Time.timeScale = 0.2f;
+    }
+// End of Animation Events
+
     private void CheckForDeath(Collider2D otherCollider2D)
     {
-        foreach (LayerMask deathlyLayer in layersThatKillMe)
+        if (!invulnerable)
         {
-            if (1 << otherCollider2D.gameObject.layer == deathlyLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
+            foreach (LayerMask deathlyLayer in layersThatKillMe)
             {
-                if (alive) { Die(); }
+                if (1 << otherCollider2D.gameObject.layer == deathlyLayer.value) //https://forum.unity.com/threads/get-the-layernumber-from-a-layermask.114553/
+                {
+                    if (alive) { Die(); }
+                }
             }
         }
 
@@ -76,6 +94,22 @@ public class Player : MonoBehaviour
         Vector2 moveSpeed = new Vector2(runSpeed * runButtonPressedAmount, myRigidbody2D.velocity.y);
         myRigidbody2D.velocity = moveSpeed;
     }
+
+    public void ExitLevel()
+    {
+        SetInvulnerability(true);
+        
+        myAnimator.SetTrigger(exitingLevelAnimationString);
+    }
+
+    private void SetInvulnerability(bool nowInvulnerableBool)
+    {
+        invulnerable = nowInvulnerableBool;
+    }
+
+
+
+    
 
     private void CacheComponentReferences()
     {
