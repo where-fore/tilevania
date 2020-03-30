@@ -8,6 +8,7 @@ TagManager:
   - SceneLoader
   - GameSession
   - TimeKeeper
+  - Coin
   layers:
   - Default
   - TransparentFX

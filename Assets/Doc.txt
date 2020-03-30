@@ -8,3 +8,10 @@ how to change timescale
     -> how to reset
         -timer/delay
         -on
+
+
+to do:
+
+code cleanup
+-------------
+combine LivesUI and ScoreUI into one script UIUpdateFromGameSession

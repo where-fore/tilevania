@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] private AudioClip pickupAudioClip = null;
+    [SerializeField] private int scoreValue = 1;
     private string playerTag = "Player";
     private void OnTriggerEnter2D(Collider2D otherCollider2D)
     {   
@@ -22,4 +23,6 @@ public class Coin : MonoBehaviour
         AudioSource.PlayClipAtPoint(pickupAudioClip, Camera.main.transform.position);
         Destroy(gameObject);
     }
+
+    public int GetScoreValue() { return scoreValue; }
 }

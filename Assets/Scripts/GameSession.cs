@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    private int playerLives = 2;
     private float levelRestartOnDeathDelay = 2f;
-    [SerializeField] private Text livesText = null;
-    [SerializeField] private Text scoreText = null;
+
+    private int playerLives = 2;
+    private int score = 0;
 
     private string sceneLoaderTagString = "SceneLoader";
     private SceneLoader theSceneLoader = null;
@@ -34,6 +34,8 @@ public class GameSession : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
+        TakeScore();
+        
         if (playerLives > 1)
         {
             TakeLife();
@@ -45,9 +47,28 @@ public class GameSession : MonoBehaviour
         }
     }
 
+    public void AddToScore(int amount)
+    {
+        score += amount;
+    }
+
+    public int GetPlayerLives()
+    {
+        return playerLives;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
     private void TakeLife()
     {
         playerLives--;
+    }
+    private void TakeScore()
+    {
+        score = 0;
     }
  
     private void ResetGameSession(float delay)

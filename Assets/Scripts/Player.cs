@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private string sceneLoaderTagString = "SceneLoader";
     private string gameSessionTagString = "GameSession";
     private string timeKeeperTagString = "TimeKeeper";
+    private string coinTagString = "Coin";
 
     private bool alive = true;
 
@@ -53,6 +54,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherCollider2D)
     {
         CheckForDeath(otherCollider2D);
+        CheckForCoin(otherCollider2D);
     }
 
  // Used in Animation Events
@@ -81,6 +83,21 @@ public class Player : MonoBehaviour
 
     }
 
+    private void CheckForCoin(Collider2D otherCollider2D)
+    {
+        if (otherCollider2D.gameObject.tag == coinTagString)
+        {
+            PickupCoin(otherCollider2D.gameObject);
+        }
+    }
+
+    private void PickupCoin(GameObject coin)
+    {
+        int scoreValue = coin.GetComponent<Coin>().GetScoreValue();
+
+        FindTheGameSession().AddToScore(scoreValue);
+    }
+
     private void Die()
     {
         alive = false;
@@ -88,7 +105,7 @@ public class Player : MonoBehaviour
         myAnimator.SetBool(isAliveAnimationString, false);
         theTimeKeeper.SetTimeScale(deathTimeScale);
         
-        FindTheGameSession().GetComponent<GameSession>().ProcessPlayerDeath();
+        FindTheGameSession().ProcessPlayerDeath();
     }
 
     private void ListenForMovementInputs()
@@ -127,9 +144,9 @@ public class Player : MonoBehaviour
         theTimeKeeper = GameObject.FindGameObjectWithTag(timeKeeperTagString).GetComponent<TimeKeeper>();
     }
 
-    private GameObject FindTheGameSession()
+    private GameSession FindTheGameSession()
     {
-        return GameObject.FindGameObjectWithTag(gameSessionTagString);
+        return GameObject.FindGameObjectWithTag(gameSessionTagString).GetComponent<GameSession>();
     }
     
 }
