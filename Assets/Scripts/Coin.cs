@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     [SerializeField] private AudioClip pickupAudioClip = null;
     private string playerTag = "Player";
+    private string mainCameraTag = "MainCamera";
     private void OnTriggerEnter2D(Collider2D otherCollider2D)
     {   
         if (otherCollider2D.tag == playerTag)
@@ -19,7 +20,12 @@ public class Coin : MonoBehaviour
 
     private void PickUp()
     {
-        AudioSource.PlayClipAtPoint(pickupAudioClip, transform.position);
+        AudioSource.PlayClipAtPoint(pickupAudioClip, FindTheGameCamera().transform.position);
         Destroy(gameObject);
+    }
+    
+    private GameObject FindTheGameCamera()
+    {
+        return GameObject.FindGameObjectWithTag(mainCameraTag);
     }
 }
