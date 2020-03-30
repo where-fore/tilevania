@@ -7,13 +7,17 @@ public class Player : MonoBehaviour
 {
     // Config
     [SerializeField] private float runSpeed = 5.0f;
-    [SerializeField] private LayerMask[] layersThatKillMe;
+    [SerializeField] private LayerMask[] layersThatKillMe = new LayerMask[0];
     [SerializeField] private Sprite deadSprite;
-    [SerializeField] private Vector2 deathAnimationForce;
+    [SerializeField] private Vector2 deathAnimationForce = Vector2.zero;
+    [SerializeField] private float deathTimeScale = 0.3f;
     
     private string horizontalMovementInputString = "Horizontal";
     private string isAliveAnimationString = "IsAlive";
     private string exitingLevelAnimationString = "ExitingLevel";
+    private string sceneLoaderTagString = "SceneLoader";
+    private string gameSessionTagString = "GameSession";
+    private string timeKeeperTagString = "TimeKeeper";
 
     private bool alive = true;
 
@@ -23,6 +27,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D myRigidbody2D;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
+    private SceneLoader theSceneLoader = null;
+    private GameSession theGameSession = null;
+    private TimeKeeper  theTimeKeeper = null;
 
 
     // Messages then methods
@@ -52,15 +59,11 @@ public class Player : MonoBehaviour
  // Used in Animation Events
     public void FinishExitingLevel()
     {
-        Debug.Log("Player Exit Animation Finished");
-        //Time.timeScale = 1f;
-
-        GameObject.FindObjectOfType<SceneTransitioner>().LoadNextLevel();
+        theSceneLoader.LoadNextLevel();
     }
     public void StartExitingLevel()
     {
-        Debug.Log("Player Exit Animation Started");
-        //Time.timeScale = 0.2f;
+
     }
 // End of Animation Events
 
@@ -82,10 +85,11 @@ public class Player : MonoBehaviour
     private void Die()
     {
         alive = false;
-        GetComponent<AudioSource>().Play();
         myRigidbody2D.velocity = deathAnimationForce;
         myAnimator.SetBool(isAliveAnimationString, false);
-        Time.timeScale = 0.3f;
+        theTimeKeeper.SetTimeScale(deathTimeScale);
+        
+        theGameSession.ProcessPlayerDeath();
     }
 
     private void ListenForMovementInputs()
@@ -120,5 +124,8 @@ public class Player : MonoBehaviour
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        theSceneLoader = GameObject.FindGameObjectWithTag(sceneLoaderTagString).GetComponent<SceneLoader>();
+        theGameSession = GameObject.FindGameObjectWithTag(gameSessionTagString).GetComponent<GameSession>();
+        theTimeKeeper = GameObject.FindGameObjectWithTag(timeKeeperTagString).GetComponent<TimeKeeper>();
     }
 }

@@ -1,1 +1,10 @@
-water - only kill player once it reaches their head - to prevent the water coming up from the tile under you and instantly killing you
+water - only kill player once it reaches their head - to prevent the water coming up from the tile under you and instantly killing you\
+
+
+
+how to change timescale
+-locally when needed, like in Player.cs
+-through a public static class
+    -> how to reset
+        -timer/delay
+        -on

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTransitioner : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private int startMenuSceneIndex;
+    [SerializeField] private int startMenuSceneIndex = 0;
     //[SerializeField] private int optionsMenuSceneIndex;
-    [SerializeField] private int congratulationsSceneIndex;
+    [SerializeField] private int congratulationsSceneIndex = 0;
 
     private void Awake()
     {
@@ -76,21 +76,21 @@ public class SceneTransitioner : MonoBehaviour
 
     private IEnumerator DelayThenLoadNextSceneCoroutine(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private IEnumerator DelayThenLoadSceneCoroutine(float delay, int sceneToLoadBuildIndex)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         SceneManager.LoadScene(sceneToLoadBuildIndex);
     }
 
     private IEnumerator DelayThenQuitGame(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
 
         Application.Quit();
     }
