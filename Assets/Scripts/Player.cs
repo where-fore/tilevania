@@ -35,8 +35,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         CacheComponentReferences();
-        Debug.Log(FindTheGameSession());
-        Debug.Log(FindTheGameSession().GetComponent<GameSession>());
     }
 
     void Update()
