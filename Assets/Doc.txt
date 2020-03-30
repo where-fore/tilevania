@@ -12,6 +12,11 @@ how to change timescale
 
 to do:
 
+fix ladders so you snap to them so you don't get caught under a ledge, unable to move horizontally
+
+finesse camera - too much movement right now
+
+
 code cleanup
 -------------
 combine LivesUI and ScoreUI into one script UIUpdateFromGameSession

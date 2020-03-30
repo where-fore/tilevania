@@ -7,7 +7,7 @@ public class GameSession : MonoBehaviour
 {
     private float levelRestartOnDeathDelay = 2f;
 
-    private int playerLives = 2;
+    private int playerLives = 3;
     private int score = 0;
 
     private string sceneLoaderTagString = "SceneLoader";
