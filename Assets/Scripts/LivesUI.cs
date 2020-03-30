@@ -17,7 +17,6 @@ public class LivesUI : MonoBehaviour
     private void Update()
     {
         UpdateText();
-        Debug.Log(theGameSession == null);
     }
 
     private void UpdateText()

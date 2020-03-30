@@ -34,8 +34,7 @@ public class GameSession : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
-        TakeScore();
-        
+
         if (playerLives > 1)
         {
             TakeLife();
@@ -65,10 +64,6 @@ public class GameSession : MonoBehaviour
     private void TakeLife()
     {
         playerLives--;
-    }
-    private void TakeScore()
-    {
-        score = 0;
     }
  
     private void ResetGameSession(float delay)
