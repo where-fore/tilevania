@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
     private int playerLives = 2;
     private float levelRestartOnDeathDelay = 2f;
+    [SerializeField] private Text livesText = null;
+    [SerializeField] private Text scoreText = null;
 
     private string sceneLoaderTagString = "SceneLoader";
     private SceneLoader theSceneLoader = null;
+
     void Awake()
     {
         int numberofGameSessions = FindObjectsOfType<GameSession>().Length;
