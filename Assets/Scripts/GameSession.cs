@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] private int playerLives = 3;
+    private int playerLives = 2;
+    private float levelRestartOnDeathDelay = 2f;
 
-    private void Awake()
+    private string sceneLoaderTagString = "SceneLoader";
+    private SceneLoader theSceneLoader = null;
+    void Awake()
     {
-        
+        int numberofGameSessions = FindObjectsOfType<GameSession>().Length;
+
+        if (numberofGameSessions > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        CacheComponentReferences();
     }
 
     public void ProcessPlayerDeath()
@@ -16,20 +33,34 @@ public class GameSession : MonoBehaviour
         if (playerLives > 1)
         {
             TakeLife();
+            theSceneLoader.RestartLevel(levelRestartOnDeathDelay);
         }
         else
         {
-            ResetGameSession();
+            ResetGameSession(levelRestartOnDeathDelay);
         }
     }
 
     private void TakeLife()
     {
-        playerLives -= 1;
+        playerLives--;
+    }
+ 
+    private void ResetGameSession(float delay)
+    {
+        StartCoroutine(actuallyResetGameSession(delay));
     }
 
-    private void ResetGameSession()
+    private IEnumerator actuallyResetGameSession(float delay)
     {
+        yield return new WaitForSecondsRealtime(delay);
 
+        theSceneLoader.LoadMainMenu();
+        Destroy(gameObject);
+    }
+    
+    private void CacheComponentReferences()
+    {
+        theSceneLoader = GameObject.FindGameObjectWithTag(sceneLoaderTagString).GetComponent<SceneLoader>();
     }
 }

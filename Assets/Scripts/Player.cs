@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
     private SceneLoader theSceneLoader = null;
-    private GameSession theGameSession = null;
     private TimeKeeper  theTimeKeeper = null;
 
 
@@ -36,6 +35,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         CacheComponentReferences();
+        Debug.Log(FindTheGameSession());
+        Debug.Log(FindTheGameSession().GetComponent<GameSession>());
     }
 
     void Update()
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
         myAnimator.SetBool(isAliveAnimationString, false);
         theTimeKeeper.SetTimeScale(deathTimeScale);
         
-        theGameSession.ProcessPlayerDeath();
+        FindTheGameSession().GetComponent<GameSession>().ProcessPlayerDeath();
     }
 
     private void ListenForMovementInputs()
@@ -125,7 +126,12 @@ public class Player : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         theSceneLoader = GameObject.FindGameObjectWithTag(sceneLoaderTagString).GetComponent<SceneLoader>();
-        theGameSession = GameObject.FindGameObjectWithTag(gameSessionTagString).GetComponent<GameSession>();
         theTimeKeeper = GameObject.FindGameObjectWithTag(timeKeeperTagString).GetComponent<TimeKeeper>();
     }
+
+    private GameObject FindTheGameSession()
+    {
+        return GameObject.FindGameObjectWithTag(gameSessionTagString);
+    }
+    
 }
