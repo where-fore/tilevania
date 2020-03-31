@@ -1,18 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VerticalScroll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float scrollSpeed = 0.2f;
+    private Rigidbody2D myRigidbody2D;
+
+    private void Start()
     {
-        
+        myRigidbody2D = GetComponent<Rigidbody2D>();
+        ScrollUp();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        //ScrollUp();
+    }
+
+    private void ScrollUp()
+    {
+        myRigidbody2D.velocity = new Vector2(0f, scrollSpeed);
     }
 }
