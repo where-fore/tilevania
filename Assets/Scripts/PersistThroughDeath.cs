@@ -38,9 +38,6 @@ public class PersistThroughDeath : MonoBehaviour
 
     private void CheckIfHome()
     {
-        Debug.Log("checking if home");
-
-
         if (!hasSetMyHome)
         {
             SetMyHome();
@@ -48,7 +45,7 @@ public class PersistThroughDeath : MonoBehaviour
 
         if (!IsHome())
         {
-            Debug.Log("destroying due to not home");
+            // Debug.Log("destroying due to not home");
             SelfDestruct();
         }
 
@@ -56,11 +53,6 @@ public class PersistThroughDeath : MonoBehaviour
 
     private void CheckSingleton()
     {
-        
-        Debug.Log("checking if singleton");
-
-        
-
         List<PersistThroughDeath> aliveCopiesOfMe = new List<PersistThroughDeath>();
         
         PersistThroughDeath[] copiesOfMe = FindObjectsOfType<PersistThroughDeath>();
@@ -74,7 +66,7 @@ public class PersistThroughDeath : MonoBehaviour
 
         if (aliveCopiesOfMe.Count > 1)
         {
-            Debug.Log("destroying due to singleton");
+            //Debug.Log("destroying due to singleton");
             SelfDestruct();
         }
         else
