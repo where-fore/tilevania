@@ -23,6 +23,7 @@ public class BetterJump : MonoBehaviour
     private Rigidbody2D myRigidbody2D;
     private CapsuleCollider2D myBodyCollider2D;
     private BoxCollider2D myFeetCollider2D;
+    private int feetChildIndex = 0;
 
     private void Start()
     {
@@ -78,6 +79,17 @@ public class BetterJump : MonoBehaviour
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myBodyCollider2D = GetComponent<CapsuleCollider2D>();
-        myFeetCollider2D = GetComponent<BoxCollider2D>();
+        FindFeet();
+    }
+
+    private void FindFeet()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<PlayerFeet>())
+            {
+                myFeetCollider2D = child.GetComponent<BoxCollider2D>();
+            }
+        }
     }
 }

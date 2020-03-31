@@ -33,12 +33,12 @@ public class Player : MonoBehaviour
 
 
     // Messages then methods
-    void Start()
+    private void Start()
     {
         CacheComponentReferences();
     }
 
-    void Update()
+    private void Update()
     {
         if (alive)
         {
@@ -96,6 +96,11 @@ public class Player : MonoBehaviour
         int scoreValue = coin.GetComponent<Coin>().GetScoreValue();
 
         FindTheGameSession().AddToScore(scoreValue);
+    }
+
+    public void KillPlayer()
+    {
+        Die();
     }
 
     private void Die()
