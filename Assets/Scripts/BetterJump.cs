@@ -23,7 +23,6 @@ public class BetterJump : MonoBehaviour
     private Rigidbody2D myRigidbody2D;
     private CapsuleCollider2D myBodyCollider2D;
     private BoxCollider2D myFeetCollider2D;
-    private int feetChildIndex = 0;
 
     private void Start()
     {
