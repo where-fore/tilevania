@@ -16,6 +16,8 @@ fix ladders so you snap to them so you don't get caught under a ledge, unable to
 
 finesse camera - too much movement right now
 
+finesse movement - https://www.youtube.com/watch?v=STyY26a_dPY
+
 
 code cleanup
 -------------
