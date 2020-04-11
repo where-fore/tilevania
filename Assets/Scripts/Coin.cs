@@ -6,6 +6,8 @@ public class Coin : MonoBehaviour
 {
     [SerializeField] private AudioClip pickupAudioClip = null;
     [SerializeField] private int scoreValue = 1;
+    [SerializeField] private float pickupVolume = 0.3f;
+
     private string playerTag = "Player";
     private void OnTriggerEnter2D(Collider2D otherCollider2D)
     {   
@@ -20,7 +22,7 @@ public class Coin : MonoBehaviour
 
     private void PickUp()
     {
-        AudioSource.PlayClipAtPoint(pickupAudioClip, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(pickupAudioClip, Camera.main.transform.position, pickupVolume);
         Destroy(gameObject);
     }
 
