@@ -1,11 +1,18 @@
 current issues:
 coin pickup sound does not follow camera
+    > have a coin pickup component on the cameraso it stays attached
 
 water only kills player when it rises to touch their head, instead of whenver their head hitbox contacts the water
 
 please add music
 
 if you hold a while you start to climb a ladder, your animation is locked into the running left animation instead of climbing
+
+
+design:
+pillars -> exploration, or adrenaline
+currently the water rising punishes slow play - either lean into it for adrenaline, or use it sparingly for exploration
+    make sure it is incredibly telegraphed
 
 
 
